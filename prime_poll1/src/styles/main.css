@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+.nav-item {
+  @apply relative flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-300 hover:bg-white/5 overflow-hidden;
+}
+
+.nav-active {
+  @apply bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.1)];
+}
+
+.icon-box {
+  @apply w-8 flex justify-center text-slate-400 group-hover:scale-110 transition-transform duration-300;
+}
+
+.nav-active .icon-box {
+  @apply text-emerald-400;
+}
+
+.active-indicator {
+  @apply absolute left-0 w-1 h-0 bg-emerald-400 rounded-r-full transition-all duration-300 opacity-0;
+}
+
+.nav-active .active-indicator {
+  @apply h-6 opacity-100;
+}
+
+.filter-item {
+  @apply flex items-center gap-4 w-full px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-sm font-semibold text-slate-400 hover:text-white;
+}
+
+.status-indicator {
+  @apply w-1.5 h-1.5 rounded-full;
+}
+
+.count-badge {
+  @apply text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded-md group-hover:bg-slate-700 transition-colors;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+.stat-card {
+  @apply bg-slate-900 border border-slate-800 p-6 rounded-3xl hover:border-slate-700 transition-all;
+}
+.form-input {
+  @apply w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all;
+}
+.form-input {
+  @apply w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all;
+}
+body{
+  font-family: 'Inter', sans-serif;
+}
